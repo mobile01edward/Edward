@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E282D663-FC79-4FA5-AA51-B5A4AF105315}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dove</RootNamespace>
+    <AssemblyName>Dove</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Dove.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Dove.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <ExpressionBlendVersion>5.0.40218.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExifLib">
+      <HintPath>lib\ExifLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls" />
+    <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>lib\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Device" />
+    <Reference Include="System.Servicemodel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+    <Reference Include="Telerik.Windows.Controls.Primitives, Version=2013.2.612.2040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Core, Version=2013.2.612.2040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DoubleScaleConverner .cs" />
+    <Compile Include="EditDelicious.xaml.cs">
+      <DependentUpon>EditDelicious.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FilterPag.xaml.cs">
+      <DependentUpon>FilterPag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FoodDetail2.xaml.cs">
+      <DependentUpon>FoodDetail2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FoodDetail.xaml.cs">
+      <DependentUpon>FoodDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MemoryDiagnosticsHelper.cs" />
+    <Compile Include="MoreNearby.xaml.cs">
+      <DependentUpon>MoreNearby.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GoogleTileSource.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MoreBest.xaml.cs">
+      <DependentUpon>MoreBest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PickPlace.xaml.cs">
+      <DependentUpon>PickPlace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileData.xaml.cs">
+      <DependentUpon>ProfileData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileMap.xaml.cs">
+      <DependentUpon>ProfileMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReviewPage.xaml.cs">
+      <DependentUpon>ReviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewPhoto.xaml.cs">
+      <DependentUpon>ReviewPhoto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchPag.xaml.cs">
+      <DependentUpon>SearchPag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SendRequest.cs" />
+    <Compile Include="UsingMap.cs" />
+    <Compile Include="ViewModels\ItemViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="EditDelicious.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FilterPag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FoodDetail2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FoodDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MoreNearby.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Edit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MoreBest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <DesignData Include="SampleData\MainViewModelSampleData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </DesignData>
+    <Page Include="PickPlace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProfileData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProfileMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReviewPhoto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchPag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\arrow.png" />
+    <Content Include="Image\arrowUp.png" />
+    <Content Include="Image\bar.png" />
+    <Content Include="Image\Barcomments.png" />
+    <Content Include="Image\Barlike.png" />
+    <Content Include="Image\Barlist.png" />
+    <Content Include="Image\Barlocate.png" />
+    <Content Include="Image\Barsearch.png" />
+    <Content Include="Image\Barshare.png" />
+    <Content Include="Image\Barupload.png" />
+    <Content Include="Image\cafe.png" />
+    <Content Include="Image\comment.png" />
+    <Content Include="Image\compose.png" />
+    <Content Include="Image\currentLocation.png" />
+    <Content Include="Image\Detaillocation.png" />
+    <Content Include="Image\filter.png" />
+    <Content Include="Image\food.png" />
+    <Content Include="Image\gasStation.png" />
+    <Content Include="Image\gridview.png" />
+    <Content Include="Image\likeS.png" />
+    <Content Include="Image\location.png" />
+    <Content Include="Image\more.png" />
+    <Content Include="Image\nightlife.png" />
+    <Content Include="Image\parking.png" />
+    <Content Include="Image\pin.png" />
+    <Content Include="Image\RateIcon0.png" />
+    <Content Include="Image\RateIcon1.png" />
+    <Content Include="Image\search.png" />
+    <Content Include="Image\selected.png" />
+    <Content Include="Image\smiley.png" />
+    <Content Include="Image\tileBar.png" />
+    <Content Include="Image\TileBest110.png" />
+    <Content Include="Image\tileCafe.png" />
+    <Content Include="Image\tileFood.png" />
+    <Content Include="Image\tileGasStation.png" />
+    <Content Include="Image\tileNightlife.png" />
+    <Content Include="Image\tileParking.png" />
+    <Content Include="Image\Unselected.png" />
+    <Content Include="Image\selectedGridview.png" />
+    <Content Include="m01app-dove.png" />
+    <Content Include="TestImage\Desert.jpg" />
+    <Content Include="Image\01.png" />
+    <Content Include="Image\add.png" />
+    <Content Include="Image\back.png" />
+    <Content Include="Image\basecircle.png" />
+    <Content Include="Image\cancel.png" />
+    <Content Include="Image\check.png" />
+    <Content Include="Image\close.png" />
+    <Content Include="Image\delete.png" />
+    <Content Include="Image\download.png" />
+    <Content Include="Image\edit.png" />
+    <Content Include="Image\favs.addto.png" />
+    <Content Include="Image\favs.png" />
+    <Content Include="Image\feature.alarm.png" />
+    <Content Include="Image\feature.calendar.png" />
+    <Content Include="Image\feature.camera.png" />
+    <Content Include="Image\feature.email.png" />
+    <Content Include="Image\feature.phone.png" />
+    <Content Include="Image\feature.search.png" />
+    <Content Include="Image\feature.settings.png" />
+    <Content Include="Image\feature.video.png" />
+    <Content Include="Image\folder.png" />
+    <Content Include="Image\Lighthouse.jpg" />
+    <Content Include="Image\like.png" />
+    <Content Include="Image\microphone.png" />
+    <Content Include="Image\minus.png" />
+    <Content Include="Image\new.png" />
+    <Content Include="Image\next.png" />
+    <Content Include="Image\overflowdots.png" />
+    <Content Include="Image\questionmark.png" />
+    <Content Include="Image\refresh.png" />
+    <Content Include="Image\save.png" />
+    <Content Include="Image\share.png" />
+    <Content Include="Image\stop.png" />
+    <Content Include="Image\sync.png" />
+    <Content Include="Image\transport.ff.png" />
+    <Content Include="Image\transport.pause.png" />
+    <Content Include="Image\transport.play.png" />
+    <Content Include="Image\transport.rew.png" />
+    <Content Include="Image\upload.png" />
+    <Content Include="TestImage\Lighthouse.jpg" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="TestImage\TestBest10.jpg" />
+    <Content Include="TestImage\TestBest6.jpg" />
+    <Content Include="TestImage\TestBest7.jpg" />
+    <Content Include="TestImage\TestBest8.jpg" />
+    <Content Include="TestImage\TestBest9.jpg" />
+    <Content Include="TestImage\TestCheck.png" />
+    <Content Include="TestImage\TestIcon3.png" />
+    <Content Include="TestImage\TestIcon4.png" />
+    <Content Include="TestImage\TestUnSelectPhoto.png" />
+    <Content Include="TestImage\TestBest1.jpg" />
+    <Content Include="TestImage\TestBest2.jpg" />
+    <Content Include="TestImage\TestBest3.jpg" />
+    <Content Include="TestImage\TestBest4.jpg" />
+    <Content Include="TestImage\TestBest5.jpg" />
+    <Content Include="TestImage\TestCafe.png" />
+    <Content Include="TestImage\TestComment.png" />
+    <Content Include="TestImage\TestFaverIcon.png" />
+    <Content Include="TestImage\TestIcon.png" />
+    <Content Include="TestImage\TestIcon2.png" />
+    <Content Include="TestImage\TestLike.png" />
+    <Content Include="TestImage\TestMe.jpg" />
+    <Content Include="TestImage\TestPoint.png" />
+    <Content Include="TestImage\TestRateIcon1.png" />
+    <Content Include="TestImage\TestRateIcon0.png" />
+    <Content Include="TestImage\TestSelecIcon1.png" />
+    <Content Include="TestImage\TestSelecIcon2.png" />
+    <Content Include="TestImage\TestSelecIcon3.png" />
+    <Content Include="TestImage\TestSelelectPhoto.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
